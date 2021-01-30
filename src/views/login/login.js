@@ -33,7 +33,6 @@ const LogIn = () => {
             auth.signInWithRedirect(authProvider);
             await auth.getRedirectResult();
             history.push('/dashboard');
-
         } catch (err) {
             setError(err.message);
             console.log(error);
