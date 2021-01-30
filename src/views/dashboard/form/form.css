@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+#daily-form {
+  border-radius: 10px;
+  background-color: #64B6AC;
+  color: white;
+  min-height: 300px;
+  width: 400px;
+  padding: 10px;
+  text-align: center;
+}
+
+#symptoms {
+  height: 100px;
+}
+
+#notes {
+  height: 150px;
+}
+
+textarea {
+  resize: none;
+}
+
+.form-control {
+  width: 90%;
+  border-radius: 10px;
+  border: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  outline: none;
+}
