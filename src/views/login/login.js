@@ -64,10 +64,10 @@ const LogIn = () => {
                     <label htmlFor="password">Password</label>
                     <input id="password" type="password" className="form-control" value={password} placeholder="Enter Password" onChange={updatePassword} required></input>
                 </div>
-                <button type="submit" className="btn btn-primary">Sign In</button>
+                <button type="submit" className="btn btn-primary" style={{width: 200}}>Sign In</button>
             </form>
             < br/>
-            <button type="button" className="btn btn-primary" onClick={googleSignIn}>Sign in with Google</button>
+            <button type="button" className="btn btn-primary" style={{width: 200}} onClick={googleSignIn}>Sign in with Google</button>
         </div>
     )
 }
