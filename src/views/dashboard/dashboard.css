@@ -1,4 +1,23 @@
 .leftPanel {
     display: flex;
     flex-direction: column;
+    justify-items: space-around;
+}
+
+.leftPanel-text {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    padding-left: 45px;
+    padding-top: 50px;
+}
+
+.leftPanel-form {
+    margin: auto;
+    padding: 45px;
+}
+
+.rightPanel {
+    display: flex;
+    flex-direction: column;
 }

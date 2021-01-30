@@ -1,7 +1,8 @@
 import React from 'react';
 import SplitPane from 'react-split-pane';
 import CDCbox from '../../components/CDCbox/CDCbox'
-import Form from './form/form';
+import Form from '../../components/form/form';
+import WelcomeText from '../../components/welcomeText/welcomeText';
 import './dashboard.css';
 
 // note:
@@ -14,17 +15,20 @@ const Dashboard = () => (
       className="splitPane"
       split="vertical" 
       allowResize={false}
-      defaultSize={1200}
+      defaultSize={1500}
       primary="second"
       pane1Style={{backgroundColor:"#92DAD4"}}
       >
         <div className="leftPanel">
-          <h1>Welcome Back!</h1>
+          <div className="leftPanel-text">
+            <WelcomeText />
+          </div>
           <br />
-          <Form />
+          <div className="leftPanel-form">
+            <Form />
+          </div>
         </div>
         <div className="rightPanel">
-          put rightside components here
           <CDCbox />
         </div>
     </SplitPane>
