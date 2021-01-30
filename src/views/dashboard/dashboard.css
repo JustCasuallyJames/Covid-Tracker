@@ -1,0 +1,4 @@
+.leftPanel {
+    display: flex;
+    flex-direction: column;
+}

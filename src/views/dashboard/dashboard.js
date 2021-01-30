@@ -1,6 +1,7 @@
 import React from 'react';
 import SplitPane from 'react-split-pane';
 import CDCbox from '../../components/CDCbox/CDCbox'
+import Form from './form/form';
 import './dashboard.css';
 
 // note:
@@ -17,7 +18,11 @@ const Dashboard = () => (
       primary="second"
       pane1Style={{backgroundColor:"#92DAD4"}}
       >
-        <div className="leftPanel">put leftside components here</div>
+        <div className="leftPanel">
+          <h1>Welcome Back!</h1>
+          <br />
+          <Form />
+        </div>
         <div className="rightPanel">
           put rightside components here
           <CDCbox />
