@@ -1,7 +1,7 @@
 import React from 'react';
 import SplitPane from 'react-split-pane';
 import CDCbox from '../../components/CDCbox/CDCbox'
-import Form from './form/form';
+import Form from '../../components/form/form';
 import './dashboard.css';
 
 // note:
