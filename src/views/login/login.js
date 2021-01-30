@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import firebase from 'firebase/app';
-import auth from '../firebase/firebase';
+import auth from '../../components/firebase/firebase.js';
 
 const LogIn = () => {
     const [email, setEmail] = useState('');
