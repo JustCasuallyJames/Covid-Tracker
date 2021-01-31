@@ -13,7 +13,7 @@ function Form() {
                 <h2 id="prompt">How Have You Been?</h2>
                 <div id="header-line"></div>
                 <div id="covid-div">
-                    <h4 id="covid-question">Do you have Covid?</h4>
+                    <h4 id="covid-question">Do you have currently have Covid?</h4>
                     <div id="diagnosis-options">
                         <input id="positive" type="radio" name="diagnosis" value="positive" checked />
                         <label for="positive"><span></span>Yes</label >
@@ -25,12 +25,12 @@ function Form() {
                 <div id="location">
                     <input type="text"  className="form-control" id="city" name="city" placeholder="City"/>
                     <select id="state" className="form-control" name="state" >
-
+                        <option value="none" aria-selected >Select State</option>
                         <option value='AL'>Alabama</option>
                         <option value='AK'>Alaska</option>
                         <option value='AZ'>Arizona</option>
                         <option value='AR'>Arkansas</option>
-                        <option value='CA' selected>California</option>
+                        <option value='CA' >California</option>
                         <option value='CO'>Colorado</option>
                         <option value='CT'>Connecticut</option>
                         <option value='DE'>Delaware</option>
