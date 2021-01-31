@@ -22,9 +22,9 @@ const WelcomeText = () => {
 
     return (
         <div className="welcome-text-wrapper">
-            <h6>{date.toLocaleDateString()}</h6>
-            <h1>Welcome Back,</h1>
-            <h1>{name || email}</h1>
+            <h4 id="date">{date.toLocaleDateString()}</h4>
+            <h1 id="welcome-back">Welcome Back,</h1>
+            <h1 id="welcome-back">{name || email}</h1>
         </div>
     )
 

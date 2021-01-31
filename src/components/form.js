@@ -111,7 +111,7 @@ const Form = () => {
                 <h2 id="prompt">How Have You Been?</h2>
                 <div id="header-line"></div>
                 <div id="covid-div">
-                    <h4 className="covid-question">Do you have currently have Covid?</h4>
+                    <h4 className="covid-question">Do you currently have Covid?</h4>
                     <div id="diagnosis-options">
                         <input id="positive" type="radio" name="diagnosis" value="positive" onClick={()=>setPositive(true)} defaultChecked />
                         <label htmlFor="positive"><span></span>Yes</label >
