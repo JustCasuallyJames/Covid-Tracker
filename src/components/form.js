@@ -107,7 +107,7 @@ const Form = () => {
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
             <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital@1&display=swap" rel="stylesheet"/>
             
-            <form id="daily-form" className="d-flex flex-column" method="POST" action="/add">       
+            <form id="daily-form" className="d-flex flex-column" onSubmit={handleFormSubmit}>       
                 <h2 id="prompt">How Have You Been?</h2>
                 <div id="header-line"></div>
                 <div id="covid-div">
