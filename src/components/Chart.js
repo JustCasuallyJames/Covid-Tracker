@@ -46,7 +46,7 @@ class ChartPanel extends React.Component{
           <div className="entire-chart-panel">
             <div className="whole-barChart">
               <h1 className="chart-title">States with the number of Highest Covid Cases</h1>
-              <BarChart width={1200} height={450} data={data}>
+              <BarChart width={1100} height={350} data={data}>
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis dataKey="name" />
                   <YAxis />
@@ -57,8 +57,8 @@ class ChartPanel extends React.Component{
               </BarChart>
             </div>
             <div className="whole-barChart">
-              <h1 className="chart-title">States with the number of Highest Covid Cases</h1>
-                <BarChart width={1200} height={450} data={data}>
+              <h1 className="chart-title">States with the number of deaths by Covid</h1>
+                <BarChart width={1100} height={350} data={data}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="name" />
                     <YAxis />

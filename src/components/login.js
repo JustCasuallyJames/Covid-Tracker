@@ -55,6 +55,7 @@ const LogIn = () => {
     }
 
     return (
+        <div id="background-login">
         <div id="login-form">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
             <h3>Register/Login</h3>
@@ -71,6 +72,7 @@ const LogIn = () => {
             </form>
             < br/>
             <button type="button" className="btn btn-primary" style={{width: 200}} onClick={googleSignIn}>Sign in with Google</button>
+        </div>
         </div>
     )
 }

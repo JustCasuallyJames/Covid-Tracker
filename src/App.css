@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  overflow: visible;
+  overflow: scroll;
 }
 
 .App-logo {
@@ -37,3 +37,7 @@
     transform: rotate(360deg);
   }
 }
+
+/* html {
+  min-height: 120%;
+} */

@@ -1,10 +1,10 @@
 import React from 'react';
 import SplitPane from 'react-split-pane';
-
 import CDCbox from './CDCbox.js';
 import Form from './form.js';
 import WelcomeText from './welcomeText.js'
 import ChartPanel from './Chart.js'
+import ActivityLogButton from './ActivityLogButton.js';
 import '../styles/dashboard.css';
 
 // note:
@@ -12,10 +12,10 @@ import '../styles/dashboard.css';
 // the we can solely export Dashboard to index.js
 const Dashboard = () => (
   <div id="dashboard">
-    {/* <h1>dashboard place holder</h1> */}
     <SplitPane 
       className="splitPane"
-      split="vertical" 
+      split="vertical"
+      overflow="scroll"
       allowResize={false}
       defaultSize={1500}
       primary="second"
@@ -28,12 +28,13 @@ const Dashboard = () => (
           <br />
           <div className="leftPanel-form">
             <Form />
+            <ActivityLogButton/>
           </div>
         </div>
+
         <div className="rightPanel">
-        <CDCbox/>
-          <ChartPanel/>
-          
+          <CDCbox/>
+          <ChartPanel/>  
         </div>
     </SplitPane>
   </div>
