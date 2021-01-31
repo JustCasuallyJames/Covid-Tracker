@@ -1,56 +1,63 @@
 import { BarChart, Bar, XAxis, YAxis,CartesianGrid, Tooltip,Legend } from 'recharts';
 import React from 'react';
-
+import './chart.css';
 const data = [
     {
       "name": "Page A",
-      "uv": 4000,
-      "pv": 2400
+      "Number of Covid-19 cases": 4000,
+      "Number of Covid-19 deaths": 2400
     },
     {
       "name": "Page B",
-      "uv": 3000,
-      "pv": 1398
+      "Number of Covid-19 cases": 3000,
+      "Number of Covid-19 deaths": 1398
     },
     {
       "name": "Page C",
-      "uv": 2000,
-      "pv": 9800
+      "Number of Covid-19 cases": 2000,
+      "Number of Covid-19 deaths": 9800
     },
     {
       "name": "Page D",
-      "uv": 2780,
-      "pv": 3908
+      "Number of Covid-19 cases": 2780,
+      "Number of Covid-19 deaths": 3908
     },
     {
       "name": "Page E",
-      "uv": 1890,
-      "pv": 4800
+      "Number of Covid-19 cases": 1890,
+      "Number of Covid-19 deaths": 4800
     },
     {
       "name": "Page F",
-      "uv": 2390,
-      "pv": 3800
+      "Number of Covid-19 cases": 2390,
+      "Number of Covid-19 deaths": 3800
     },
     {
       "name": "Page G",
-      "uv": 3490,
-      "pv": 4300
+      "Number of Covid-19 cases": 3490,
+      "Number of Covid-19 deaths": 4300
     }
 ]
 
 class ChartPanel extends React.Component{
+    constructor(props){
+        super(props);
+    
+    }
     render(){
         return (
-            <BarChart width={730} height={250} data={data}>
+            <div className="whole-barChart">
+            <h1>Number of Covid Cases By</h1>
+            <BarChart width={1200} height={450} data={data}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="pv" fill="#8884d8" />
-                <Bar dataKey="uv" fill="#82ca9d" />
+                <Bar dataKey="Number of Covid-19 cases" fill="#8884d8" />
+                <Bar dataKey="Number of Covid-19 deaths" fill="#82ca9d" />
             </BarChart>
+            </div>
         );
     }
 }
