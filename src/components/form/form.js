@@ -5,10 +5,11 @@ function Form() {
     // TO DO: set up database to send these value on form submit to the db
     const [positive, setPositive] = useState(true);
     const [city, setCity] = useState('')
-    const [state, setState] = useState('CA');
+    const [state, setState] = useState('');
     const [date, setDate] = useState('');
     const [symptoms, setSymptoms] = useState('');
     const [notes, setNotes] = useState('');
+    
 
     console.log('-------- FORM VALUES --------')
     console.log("positive: ", positive);
@@ -51,6 +52,7 @@ function Form() {
                         <label htmlFor="negative"><span></span>No</label>
                     </div>
                 </div>
+                
                 <input type="date" className="form-control" id="date" name="date" onChange={(e) => setDate(e.target.value)}required/>
                 <div id="location">
                     <input type="text"  className="form-control" id="city" name="city" onChange={(e) => setCity(e.target.value)} placeholder="City" />
@@ -109,10 +111,35 @@ function Form() {
                         <option value='WY'>Wyoming</option>
                     </select>
                 </div>
-                <textarea type="text" className="form-control" id="symptoms" name="symptoms"
-                    onChange={(e)=>setSymptoms(e.target.value)}
-                    placeholder="How did you feel? Did you experience any symptoms?" required
-                />
+                <div id="symptoms-div">
+                    <h4 className="covid-question">Do you have any of the following symptoms?</h4>
+                    <div id="symptoms-list">
+                        <input type="checkbox" name="symptom" className="symptom" value="fever"/>
+                        <label for="fever"><span>Fever</span></label>
+                        <input type="checkbox" name="symptom" className="symptom" value="cough"/>
+                        <label for="cough"><span>Cough</span></label>
+                        <input type="checkbox" name="symptom" className="symptom" value="breath"/>
+                        <label for="breath"><span>Shortness of breath</span></label> <br/>
+                        <input type="checkbox" name="symptom" className="symptom" value="fatigue"/>
+                        <label for="fatigue"><span>Fatigue</span></label>
+                        <input type="checkbox" name="symptom" className="symptom" value="body-aches"/>
+                        <label for="body-aches"><span>Muscle/body aches</span></label>
+                        <input type="checkbox" name="symptom" className="symptom" value="headache"/>
+                        <label for="headache"><span>Headache</span></label><br/>
+                        <input type="checkbox" name="symptom" className="symptom" value="senses"/>
+                        <label for="senses"><span>Loss of taste/smell</span></label>
+                        <input type="checkbox" name="symptom" className="symptom" value="sore-throat"/>
+                        <label for="sore-throat"><span>Sore throat</span></label>
+                        <input type="checkbox" name="symptom" className="symptom" value="diarrhea"/>
+                        <label for="diarrhea"><span>Diarrhea</span></label><br/>
+                        <input type="checkbox" name="symptom" className="symptom" value="congestion"/>
+                        <label for="congestion"><span>Congestion/runny nose</span></label>
+                        <input type="checkbox" name="symptom" className="symptom" value="nausea"/>
+                        <label for="nausea"><span>Nausea</span></label>
+                        <input type="checkbox" name="symptom" className="symptom" value="chills"/>
+                        <label for="chills"><span>Chills</span></label>
+                    </div>
+                </div>
                 <textarea type="text" className="form-control" id="notes" name="notes" placeholder="Notes" onChange={(e) => setNotes(e.target.value)}/>
                 <input type="submit" className="btn btn-primary" id="submitButton" value="Submit"/>   
             </form>
