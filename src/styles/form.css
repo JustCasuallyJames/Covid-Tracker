@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+#header-line {
+  width: 100%;
+  height: 5px;
+  background-color: #ffffffbb;
+  border-radius: 15px;
+}
+
+#prompt {
+  margin-top: 5px;
+}
+
+#daily-form {
+  border-radius: 10px;
+  background-color: #64B6AC;
+  color: white;
+  min-height: 300px;
+  width: 420px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+#symptoms {
+  height: 100px;
+}
+
+#notes {
+  height: 150px;
+}
+
+textarea {
+  resize: none;
+}
+
+.form-control {
+  width: 90%;
+  border-radius: 10px;
+  border: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  outline: none;
+}
+
+
+#state, #city {
+  width: 48.9%;
+  display: inline-block;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+#state {
+  cursor: pointer;
+}
+
+
+.covid-question {
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#covid-status {
+  float: right;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+#covid-div {
+  display: left;
+  padding-top: 10px;
+}
+
+#positive, #negative {
+  margin: 4px;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+}
+
+#diagnosis-options {
+  float: right;
+  padding-top: 10px;
+}
+
+.symptom {
+  width: 40px;
+  cursor: pointer;
+  height: 20px;
+  float: left;
+}
+
+.symptom-label {
+  float: left;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
