@@ -8,6 +8,7 @@ import auth from './Firebase.js';
 const LogIn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [firstName, setFirstName] = useState('');
     const [error, setError] = useState('')
     const history = useHistory();
     
@@ -17,6 +18,10 @@ const LogIn = () => {
         
     const updatePassword = (event) => {
         setPassword(event.target.value)
+    }
+
+    const updateName = (event) => {
+        setFirstName(event.target.value)
     }
 
     async function signIn() {
@@ -56,8 +61,12 @@ const LogIn = () => {
     return (
         <div id="login-form">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
-            <h3>Log In</h3>
-            <form className="d-flex flex-column" onSubmit={handleOnSubmit} action="/login" method='POST'>
+            <h3>Register</h3>
+            <form className="d-flex flex-column" onSubmit={handleOnSubmit}>
+                <div className="form-group">
+                    <label htmlFor="firstName">First Name</label>
+                    <input id="firstName" name="firstName" type="text" className="form-control" value={email} placeholder="Enter Email" onChange={updateEmail} required></input>
+                </div>
                 <div className="form-group">
                     <label htmlFor="email">Email Address</label>
                     <input id="email" name="email" type="text" className="form-control" value={email} placeholder="Enter Email" onChange={updateEmail} required></input>
