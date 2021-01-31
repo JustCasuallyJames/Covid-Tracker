@@ -31,8 +31,9 @@ const Dashboard = () => (
           </div>
         </div>
         <div className="rightPanel">
-          <CDCbox />
-          <ChartPanel/>
+        <ChartPanel/>
+          <CDCbox/>
+          
         </div>
     </SplitPane>
   </div>
