@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
+#header-line {
+  width: 100%;
+  height: 5px;
+  background-color: #ffffffbb;
+  border-radius: 15px;
+}
+
+#prompt {
+  margin-top: 5px;
+}
+
 #daily-form {
   border-radius: 10px;
   background-color: #64B6AC;
@@ -8,6 +19,7 @@
   width: 400px;
   padding: 10px;
   text-align: center;
+  margin: 0 auto;
 }
 
 #symptoms {
@@ -29,4 +41,47 @@ textarea {
   margin-top: 5px;
   margin-bottom: 5px;
   outline: none;
+}
+
+
+#state, #city {
+  width: 48.9%;
+  display: inline-block;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+#state {
+  cursor: pointer;
+}
+
+
+#covid-question {
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#covid-status {
+  float: right;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+#covid-div {
+  display: left;
+  padding-top: 10px;
+}
+
+#positive, #negative {
+  margin: 4px;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+}
+
+#diagnosis-options {
+  float: right;
+  padding-top: 10px;
 }
