@@ -3,6 +3,7 @@ import SplitPane from 'react-split-pane';
 import CDCbox from '../../components/CDCbox/CDCbox'
 import Form from '../../components/form/form';
 import WelcomeText from '../../components/welcomeText/welcomeText';
+import CovidData from '../../components/covidData/covidData';
 import './dashboard.css';
 
 // note:
@@ -30,6 +31,9 @@ const Dashboard = () => (
         </div>
         <div className="rightPanel">
           <CDCbox />
+          <br />
+          <h1>COVID-19 BY THE NUMBERS</h1>
+          <CovidData />
         </div>
     </SplitPane>
   </div>

@@ -1,0 +1,20 @@
+.data-wrapper {
+    display:flex;
+    padding-left: 200px;
+    flex: 1 1 0px;
+}
+
+.view-buttons-wrapper {
+    padding-top: 5%;
+    width: 500px;
+    position: absolute;
+}
+
+.form-control {
+    width: 90%;
+    border-radius: 10px;
+    border: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    outline: none;
+  }
