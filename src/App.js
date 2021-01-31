@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
-import LogIn from './views/login/login';
-import Dashboard from './views/dashboard/dashboard';
+import LogIn from './components/Login.js';
+import Dashboard from './components/Dashboard.js';
 
 function App() {
   return (

@@ -1,10 +1,11 @@
 import React from 'react';
 import SplitPane from 'react-split-pane';
-import CDCbox from '../../components/CDCbox/CDCbox'
-import Form from '../../components/form/form';
-import WelcomeText from '../../components/welcomeText/welcomeText';
-import ChartPanel from '../../components/Chart Panel/chart.js';
-import './dashboard.css';
+
+import CDCbox from './CDCbox.js';
+import Form from './Form.js';
+import WelcomeText from './welcomeText.js'
+import ChartPanel from './Chart.js'
+import '../styles/dashboard.css';
 
 // note:
 // we should render all of the components of the dashboard in this Dashboard component

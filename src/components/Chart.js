@@ -1,6 +1,7 @@
 import { BarChart, Bar, XAxis, YAxis,CartesianGrid, Tooltip,Legend } from 'recharts';
 import React from 'react';
-import './chart.css';
+import '../styles/chart.css';
+
 const data = [
     {
       "name": "Page A",

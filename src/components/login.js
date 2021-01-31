@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import firebase from 'firebase/app';
-import auth from '../../components/firebase/firebase.js';
+import auth from './Firebase.js';
 
 
 
