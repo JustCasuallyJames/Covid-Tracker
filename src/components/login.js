@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import firebase from 'firebase/app';
@@ -59,10 +57,10 @@ const LogIn = () => {
         <div id="login-form">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
             <h3>Log In</h3>
-            <form className="d-flex flex-column" onSubmit={handleOnSubmit} action='/username'>
+            <form className="d-flex flex-column" onSubmit={handleOnSubmit} action="/login" method='POST'>
                 <div className="form-group">
                     <label htmlFor="email">Email Address</label>
-                    <input id="email" name='email' type="text" className="form-control" value={email} placeholder="Enter Email" onChange={updateEmail} required></input>
+                    <input id="email" name="email" type="text" className="form-control" value={email} placeholder="Enter Email" onChange={updateEmail} required></input>
                 </div>
                 <div className="form-group">
                     <label htmlFor="password">Password</label>

@@ -11,7 +11,7 @@ import './dashboard.css';
 // the we can solely export Dashboard to index.js
 const Dashboard = () => (
   <div id="dashboard">
-    <h1>dashboard place holder</h1>
+    {/* <h1>dashboard place holder</h1> */}
     <SplitPane 
       className="splitPane"
       split="vertical" 
