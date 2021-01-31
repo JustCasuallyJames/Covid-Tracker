@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@100&display=swap');
+
+#background-landing {
+    height: 100vh;
+    width: 100vw;
+    background-color: #3AAFA9;
+    position: absolute;
+    text-align: center;
+}
+
+#woman-vector {
+    will-change: auto;
+    position: absolute;
+    right: 2%;
+    top: 10em;
+    animation: sway 2s ease-in-out infinite alternate;
+}
+
+@keyframes sway {
+    from {
+        right: 2%;
+    }
+    to {
+        right: 1.5%;
+    }
+}
+
+.text {
+    color:white;
+    position: relative;
+}
+
+#title {
+    font-size: 10em;
+    top: 0.450em;
+    position: relative;
+}
+
+#info {
+    font-family: 'Raleway', sans-serif;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 40px;
+    position: relative;
+}
+
+#start {
+    position: relative;
+    background-color: #766abb;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    height: 60px;
+    width: 120px;
+    font-size: 1.2em;
+    padding: 14px, 28px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 50px;
+}
+
+#start:hover {
+    background-color: #512980;
+}
