@@ -3,6 +3,7 @@ import SplitPane from 'react-split-pane';
 import CDCbox from '../../components/CDCbox/CDCbox'
 import Form from '../../components/form/form';
 import WelcomeText from '../../components/welcomeText/welcomeText';
+import ChartPanel from '../../components/Chart Panel/chart.js';
 import './dashboard.css';
 
 // note:
@@ -30,6 +31,7 @@ const Dashboard = () => (
         </div>
         <div className="rightPanel">
           <CDCbox />
+          <ChartPanel/>
         </div>
     </SplitPane>
   </div>
