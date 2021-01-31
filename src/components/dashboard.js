@@ -5,6 +5,7 @@ import Form from './form.js';
 import WelcomeText from './welcomeText.js'
 import ChartPanel from './Chart.js'
 import ActivityLogButton from './ActivityLogButton.js';
+import LogOut from './logout';
 import '../styles/dashboard.css';
 
 // note:
@@ -30,6 +31,7 @@ const Dashboard = () => (
             <Form />
             <ActivityLogButton/>
           </div>
+          <LogOut/>
         </div>
 
         <div className="rightPanel">
