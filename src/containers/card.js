@@ -4,7 +4,7 @@ import './card.css';
 
 function Card({covid, date, city, state, symptoms, notes}) {
     return (
-        <motion.div
+        <div
         initial={{ opacity: 0 }}
         animate={{
           opacity: [0, 1],
@@ -23,7 +23,7 @@ function Card({covid, date, city, state, symptoms, notes}) {
                 <p style={{textDecoration:"underline"}}>Notes</p>
                 <p>{notes}</p>
             </div>
-        </motion.div>
+        </div>
     )
 }
 
