@@ -1,6 +1,6 @@
 import React from 'react';
 import './landing.css';
-import { ReactComponent as MaskPerson } from './graphics/mask-woman.svg';
+import { ReactComponent as MaskWoman } from './graphics/mask-woman.svg';
 import { useHistory } from 'react-router-dom';
 
 // note:
@@ -17,7 +17,7 @@ const Landing = () => {
 
   return (
 
-    <div id="background">
+    <div id="background-landing">
       <div id="content">
         <h1 className="text" id="title">COVID TRACKER </h1>
         <h3 className="text" id="info">
@@ -25,7 +25,7 @@ const Landing = () => {
           incididunt ut labore et dolom.
         </h3>
         <button onClick={handleClickStart} id="start">Get Started</button>
-        <MaskPerson id="man-vector"/>
+        <MaskWoman id="woman-vector"/>
       </div>
     </div>
   )

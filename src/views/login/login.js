@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import firebase from 'firebase/app';
 import auth from '../../components/firebase/firebase.js';
+import './login.css'
 
 const LogIn = () => {
     const [email, setEmail] = useState('');
@@ -52,22 +53,24 @@ const LogIn = () => {
     }
 
     return (
-        <div id="login-form">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
-            <h3>Log In</h3>
-            <form className="d-flex flex-column" onSubmit={handleOnSubmit}>
-                <div className="form-group">
-                    <label htmlFor="email">Email Address</label>
-                    <input id="email" type="text" className="form-control" value={email} placeholder="Enter Email" onChange={updateEmail} required></input>
-                </div>
-                <div className="form-group">
-                    <label htmlFor="password">Password</label>
-                    <input id="password" type="password" className="form-control" value={password} placeholder="Enter Password" onChange={updatePassword} required></input>
-                </div>
-                <button type="submit" className="btn btn-primary" style={{width: 200}}>Sign In</button>
-            </form>
-            < br/>
-            <button type="button" className="btn btn-primary" style={{width: 200}} onClick={googleSignIn}>Sign in with Google</button>
+        <div id="background-login">    
+            <div id="login-form">
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+                <h1>Log In</h1>
+                <form className="d-flex flex-column" onSubmit={handleOnSubmit}>
+                    <div className="form-group">
+                        <label htmlFor="email">Email Address</label>
+                        <input id="email" type="text" className="form-control" value={email} placeholder="Enter Email" onChange={updateEmail} required></input>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="password">Password</label>
+                        <input id="password" type="password" className="form-control" value={password} placeholder="Enter Password" onChange={updatePassword} required></input>
+                    </div>
+                    <button type="submit" className="btn btn-primary" id="signInBtn" style={{width: 200}}>Sign In</button>
+                </form>
+                < br/>
+                <button type="button" className="btn btn-primary" id="googleBtn" style={{width: 200}} onClick={googleSignIn}>Sign in with Google</button>
+            </div>
         </div>
     )
 }
