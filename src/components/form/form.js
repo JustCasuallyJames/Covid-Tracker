@@ -1,24 +1,92 @@
 import React, { useState } from 'react';
-import './form.css'
+import './form.css';
+import Checkbox from './Checkbox'
 
-function Form() {
+const Form = () => {
+
     // TO DO: set up database to send these value on form submit to the db
     const [positive, setPositive] = useState(true);
     const [city, setCity] = useState('')
     const [state, setState] = useState('');
     const [date, setDate] = useState('');
-    const [symptoms, setSymptoms] = useState('');
     const [notes, setNotes] = useState('');
+    const[checkedSymptoms, setCheckedSymptoms] = useState({});
     
+    const handleChange = (e) => {
+        setCheckedSymptoms({...checkedSymptoms, [e.target.value]:e.target.checked});
+    }
 
+    const checkboxes = [
+        {
+            name: 'symptom',
+            value: 'fever',
+            label: 'Fever',
+        },
+        {
+            name: 'symptom',
+            value: 'cough',
+            label: 'Cough',
+        },
+        {
+            name: 'symptom',
+            value: 'nausea',
+            label: 'Nausea',
+        },
+        {
+            name: 'symptom',
+            value: 'chills',
+            label: 'Chills',
+        },
+        {
+            name: 'symptom',
+            value: 'shortBreath',
+            label: 'Shortness of Breath',
+        },
+        {
+            name: 'symptom',
+            value: 'fatigue',
+            label: 'Fatigue',
+        },
+        {
+            name: 'symptom',
+            value: 'congestion',
+            label: 'Congestion',
+        },
+        {
+            name: 'symptom',
+            value: 'bodyAches',
+            label: 'Muscle or body aches',
+        },
+        {
+            name: 'symptom',
+            value: 'headache',
+            label: 'Headache',
+        },
+        {
+            name: 'symptom',
+            value: 'diarrhea',
+            label: 'Diarrhea',
+        },
+        {
+            name: 'symptom',
+            value: 'lossSense',
+            label: 'Loss of taste/smell',
+        },
+        {
+            name: 'symptom',
+            value: 'soreThroat',
+            label: 'Sore throat',
+        },
+    ]
     console.log('-------- FORM VALUES --------')
     console.log("positive: ", positive);
     console.log("city: ", city);
     console.log("state: ", state);
     console.log("date: ", date);
-    console.log("symptoms: ", symptoms);
+    console.log("symptoms: ", checkedSymptoms);
     console.log("notes: ", notes);
     console.log("------------------------------")
+
 
     const handleFormSubmit = () => {
         // post into database
@@ -31,7 +99,7 @@ function Form() {
         setCity('');
         setState('');
         setDate('');
-        setSymptoms('');
+        setCheckedSymptoms({});
         setNotes('');
     }
 
@@ -52,7 +120,6 @@ function Form() {
                         <label htmlFor="negative"><span></span>No</label>
                     </div>
                 </div>
-                
                 <input type="date" className="form-control" id="date" name="date" onChange={(e) => setDate(e.target.value)}required/>
                 <div id="location">
                     <input type="text"  className="form-control" id="city" name="city" onChange={(e) => setCity(e.target.value)} placeholder="City" />
@@ -113,38 +180,24 @@ function Form() {
                 </div>
                 <div id="symptoms-div">
                     <h4 className="covid-question">Do you have any of the following symptoms?</h4>
-                    <div id="symptoms-list">
-                        <input type="checkbox" name="symptom" className="symptom" value="fever"/>
-                        <label for="fever"><span>Fever</span></label>
-                        <input type="checkbox" name="symptom" className="symptom" value="cough"/>
-                        <label for="cough"><span>Cough</span></label>
-                        <input type="checkbox" name="symptom" className="symptom" value="breath"/>
-                        <label for="breath"><span>Shortness of breath</span></label> <br/>
-                        <input type="checkbox" name="symptom" className="symptom" value="fatigue"/>
-                        <label for="fatigue"><span>Fatigue</span></label>
-                        <input type="checkbox" name="symptom" className="symptom" value="body-aches"/>
-                        <label for="body-aches"><span>Muscle/body aches</span></label>
-                        <input type="checkbox" name="symptom" className="symptom" value="headache"/>
-                        <label for="headache"><span>Headache</span></label><br/>
-                        <input type="checkbox" name="symptom" className="symptom" value="senses"/>
-                        <label for="senses"><span>Loss of taste/smell</span></label>
-                        <input type="checkbox" name="symptom" className="symptom" value="sore-throat"/>
-                        <label for="sore-throat"><span>Sore throat</span></label>
-                        <input type="checkbox" name="symptom" className="symptom" value="diarrhea"/>
-                        <label for="diarrhea"><span>Diarrhea</span></label><br/>
-                        <input type="checkbox" name="symptom" className="symptom" value="congestion"/>
-                        <label for="congestion"><span>Congestion/runny nose</span></label>
-                        <input type="checkbox" name="symptom" className="symptom" value="nausea"/>
-                        <label for="nausea"><span>Nausea</span></label>
-                        <input type="checkbox" name="symptom" className="symptom" value="chills"/>
-                        <label for="chills"><span>Chills</span></label>
-                    </div>
+                    {checkboxes.map(item => (
+                        <label className="symptom-label">
+                            {item.label}
+                            <Checkbox
+                                name={item.name}
+                                value={item.value}
+                                checked={checkedSymptoms[item.value]}
+                                onChange={handleChange}
+                            />
+                        </label>
+                    ))}
                 </div>
                 <textarea type="text" className="form-control" id="notes" name="notes" placeholder="Notes" onChange={(e) => setNotes(e.target.value)}/>
-                <input type="submit" className="btn btn-primary" id="submitButton" value="Submit"/>   
+                <input type="submit" className="btn btn-primary" id="submitButton" value="Submit"/>
+                   
             </form>
         </div>
     )
-}
+};
 
 export default Form;

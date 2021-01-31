@@ -16,7 +16,7 @@
   background-color: #64B6AC;
   color: white;
   min-height: 300px;
-  width: 410px;
+  width: 420px;
   padding: 10px;
   margin: 0 auto;
 }
@@ -85,16 +85,16 @@ textarea {
   padding-top: 10px;
 }
 
-#symptoms-div {
-  display: left;
-}
 
-#symptoms-list {
+.symptom {
+  width: 40px;
+  cursor: pointer;
+  height: 20px;
   float: left;
 }
 
-.symptom {
-  width: 30px;
-  cursor: pointer;
-  display: inline-table;
+.symptom-label {
+  float: left;
+  font-size: 15px;
+  margin-bottom: 10px;
 }
