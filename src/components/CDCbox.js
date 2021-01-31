@@ -1,5 +1,5 @@
 import React from 'react';
-import './CDCbox.css';
+import '../styles/CDCbox.css';
 
 function CDCbox() {
     return (

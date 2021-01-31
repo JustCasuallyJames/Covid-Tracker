@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import firebase from 'firebase';
-import './welcomeText.css';
+import '../styles/welcomeText.css';
 
 const WelcomeText = () => {
     const [date, setDate] = useState(new Date());

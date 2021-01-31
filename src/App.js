@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
-import LogIn from './views/login/login';
-import Dashboard from './views/dashboard/dashboard';
-import Landing from './views/landing/landing';
+import LogIn from './components/login.js';
+import Dashboard from './components/dashboard.js';
+import Landing from './components/landing.js';
+
 
 function App() {
   return (

@@ -55,7 +55,7 @@ textarea {
 }
 
 
-#covid-question {
+.covid-question {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
@@ -84,7 +84,6 @@ textarea {
   float: right;
   padding-top: 10px;
 }
-
 
 .symptom {
   width: 40px;
