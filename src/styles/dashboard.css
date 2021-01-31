@@ -1,7 +1,13 @@
+.outer-left-panel{
+    background-color:"#92DAD4";
+    width:30%;
+}
+
 .leftPanel {
     display: flex;
     flex-direction: column;
     justify-items: space-around;
+
 }
 
 .leftPanel-text {
@@ -15,6 +21,10 @@
 .leftPanel-form {
     margin: auto;
     padding: 45px;
+}
+
+.outer-right-panel{
+    width:50%;
 }
 
 .rightPanel {
